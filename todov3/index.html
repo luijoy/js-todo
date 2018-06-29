@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Todo</h2>
+</body>
+<script>
+  const todos = ['item 1', 'item 2', 'item 3'];
+  const todoList = {
+    todos: ['item 1', 'item 2', 'item 3'],
+    displayTodos: function () {
+      console.log('My Todos', this.todos);
+    },
+    addTodo: function (todo) {
+      this.todos.push(todo);
+      this.displayTodos();
+    },
+    changeTodo: function (position, newValue) {
+      this.todos[position] = newValue;
+      this.displayTodos();
+    },
+    deleteTodo: function (position) {
+      this.todos.splice(position, 1);
+      this.displayTodos();
+    }
+  }
+</script>
+
+</html>
