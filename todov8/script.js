@@ -1,19 +1,3 @@
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-
-<body>
-  <h2>Todo List</h2>
-
-  <button id="displayTodosButton">Display todos</button>
-  <button id="toggleAllButton">Toggle all</button>
-</body>
-<script>
   const todoList = {
     todos: [],
     displayTodos: function () {
@@ -73,15 +57,11 @@
     }
   };
 
-  var displayTodosButton = document.getElementById('displayTodosButton');
-  displayTodosButton.addEventListener('click', function () {
-    todoList.displayTodos();
-  });
-
-  var toggleAllButton = document.getElementById('toggleAllButton');
-  toggleAllButton.addEventListener('click', function () {
-    todoList.toggleAll();
-  })
-</script>
-
-</html>
+  var handlers = {
+    displayTodos: function () {
+      todoList.displayTodos();
+    },
+    toggleAll: function () {
+      todoList.toggleAll();
+    }
+  };
